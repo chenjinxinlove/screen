@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蓝天地图</title>
+
+</head>
+<script>
+  let height = window.innerHeight;
+  document.documentElement.style.fontSize = (height / 1080) * 100 + "px";
+  document.documentElement.style.fontSize = (height / 1080) * 100 + "px";
+//  window.onload = function () {
+//    document.getElementById('tilek').onclick = function () {
+//      window.location.href = "beij.html"
+//    }
+//  }
+</script>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  html, body{
+    width: 100%;
+    height: 100%;
+    /*background: url("./src/img/China_Map.jpg") no-repeat;*/
+    /*background-size: cover;*/
+  }
+  .beit {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    border:0px
+  }
+  .an{
+    position: absolute;
+    /*display: none;*/
+    opacity:0;
+    bottom:0;
+    left:0;
+  }
+  .dd{
+    z-index: 999;
+    position: absolute;
+    left: 200px;
+    top:200px;
+  }
+  .title1{width:4.52rem; height: 2.80rem;position: absolute;
+    top:0.2rem;right: 0.2rem;background: url("./src/img/tl_04.png") no-repeat ;background-size: cover;
+    z-index: 0;}
+  .offset{
+    width: 4.5rem;
+    height: 0.3rem;
+    position: absolute;
+    z-index: 9999;
+    bottom: 0.34rem;
+    left: 50%;
+    margin-left: -2.45rem;
+
+  }
+  .bei{
+    background: url("./src/img/tine.png") no-repeat;
+    background-size: cover;
+    width: 4.9rem;
+    height: 0.3rem;
+  }
+  .wt{
+    width: 0rem;
+    height: 0.3rem;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    border-radius: 0.2rem;
+    /*z-index: -1;*/
+    background: #fff;
+  }
+  .timeb{
+    width:0.45rem;
+    height: 0.45rem;
+    position: absolute;
+    top:-0.07rem;
+    left:0rem;
+    background: url("./src/img/zk.png") no-repeat 100%;
+    background-size: cover;
+    cursor: pointer;
+  }
+  .timeb1{
+    width:0.45rem;
+    height: 0.45rem;
+    position: absolute;
+    top:-0.07rem;
+    left:0rem;
+    background: url("./src/img/zk.png") no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  }
+  canvas { display: block; }
+  .clickC{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    font-size: 15px;
+    z-index: 9998;
+  }
+  .aqiShow{
+    position: absolute;
+    width: 1.8rem;
+    height:1.5rem;
+    z-index: 9997;
+    cursor: pointer;
+    /*border: 1px solid blue;*/
+  }
+  .center{
+    width: 0.7rem;
+    height: 0.7em;
+    position: absolute;
+    bottom: -0.22rem;
+    left:0.69rem;
+    background: url("./src/img/zhezhao.png") no-repeat;
+    background-size: cover;
+  }
+  .xian{
+    width: 0.06rem;
+    height: 0.3rem;
+    position: absolute;
+    bottom: 0.4rem;
+    left:0.94rem;
+    background: url("./src/img/dain.png") no-repeat;
+    background-size: cover;
+
+  }
+  .showAqi{
+    width: 1.1rem;
+    height: 1.1rem;
+    position: absolute;
+    left: 0.42rem;
+    bottom: 0.65rem;
+    background: url("./src/img/aqi.png") no-repeat;
+    background-size: cover;
+    font-size: 0.22rem;
+    color:#103a64;
+    font-weight: bold;
+
+    font-family: '微软雅黑';
+
+
+    /*transform: rotateX(60deg);*/
+  }
+  .text{
+    margin: 0.2rem 0.25rem;
+  }
+  .showAqi p{
+    margin: 0;
+    text-align: center;
+  }
+  .timeshow{
+    width: 5rem;
+    height: 1rem;
+    /* border: 1px red solid; */
+    position: absolute;
+    top: 1.5rem;
+    left: 8.2rem;
+    color: #ccc;
+    font-size: 0.45rem;
+    font-weight:bold;
+    font-family: "微软雅黑";
+  }
+</style>
+<link rel="stylesheet" href="./src/css/animate.min.css">
+<body>
+<div class="clickC" id="clickC">
+  <div class="offset" style="z-index: 2" id="offset">
+    <div class="wt" id="wt">
+      <div class="bei" id="bei"></div>
+    </div>
+    <div class="timeb" id="timeb"></div>
+  </div>
+</div>
+<!--<div class="dd">-->
+  <!--<input type="button" id="start" value="开始" class="input">-->
+  <!--<input type="button" id="pause" value="暂停" class="input">-->
+<!--</div>-->
+<div class="title1" ></div>
+
+
+
+<div class="beit">
+  <img src="src/img/china.jpg" id="img" alt="">
+</div>
+<img src="./src/img/weilan.png" alt="" id="weilan" style="display: none">
+<img src="./src/img/danlan.png" alt="" id="danlan" style="display: none">
+<img src="./src/img/yincheng.png" alt="" id="yincheng" style="display: none">
+<img src="./src/img/wumai.png" alt="" id="wumai" style="display: none">
+  <canvas id="point" style="position: absolute;top: 0;left: 0;z-index: 999;width: 100%;height: 100%" ></canvas>
+<div class="aqiShow" id="aqiShow" style="display: none">
+  <div class="center"></div>
+  <div class="xian"></div>
+  <div class="showAqi">
+    <div class="text">
+      <p>AQI</p>
+      <p class="aqinum"></p>
+    </div>
+  </div>
+</div>
+<div id="timeshow" class="timeshow">
+  <span class="day" id="day"></span>
+</div>
+</body>
+<script src="build/index.js"></script>
+</html>

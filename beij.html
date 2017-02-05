@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>蓝天地图</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script>
+   let height = window.innerHeight;
+  document.documentElement.style.fontSize = (height / 1080) * 100 + "px";
+   window.onload = function () {
+     document.getElementById('fanhui').onclick = function () {
+       window.location.href = "index.html"
+     }
+   }
+
+</script>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  html{
+   background: url("./src/img/bj.jpg") no-repeat 100% 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  #con{
+    font-size: 15px;
+    color: #fff;
+  }
+  p{
+    margin: 30px 0 ;
+  }
+  .buju{
+    width: 19.2rem;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+</style>
+<link rel="stylesheet" href="./src/css/main.css">
+<body>
+<div class="buju">
+  <div class="aqi_vi">
+    <div id="aqi" style="height: 3.6rem;width: 5.2rem;margin-top: 0.15rem"></div>
+    <div id="visibility" style="height: 3.2rem;width: 5.2rem;"></div>
+  </div>
+  <div class="wind_t fl clearfix" >
+    <div id="wind" style="height: 3.2rem;width: 4.8rem ;margin-top: 0.2rem" class="fl"></div>
+    <div id="humidity" style="height: 3.2rem;width: 4.8rem;float: left;margin-top: 0.2rem"></div>
+    <div id="rain" style="height: 3.2rem;width: 4.8rem;float: left;margin-top: 0.2rem"></div>
+  </div>
+  <div class="bl fl" style="font-size: 14px;">
+    <div id="zf" class="zf fl" style="margin: 0.6rem 0.4rem 0 0.4rem"></div>
+    <div id="y" class="fl" style="margin-top: 0.6rem;margin-bottom: 0.1rem"></div>
+    <div id="f" class="fl"></div>
+    <div id="fj" style="position: absolute;top: 0;left: 0;width: 4.12rem;height: 3.456rem"></div>
+  </div>
+  <div class="adjust">
+    <!--<p>降雨</p>-->
+
+    <div id="rangeP" class="rangeP">
+      <div class="rangeSlide" id="rangeSlide"></div>
+      <div class="rangeBar" id="rangeBar"></div>
+    </div>
+    <div id="rangeP1" class="rangeP1">
+      <div class="rangeSlide1" id="rangeSlide1"></div>
+      <div class="rangeBar1" id="rangeBar1"></div>
+    </div>
+    <div id="rangeP2" class="rangeP2">
+      <div class="rangeSlide2" id="rangeSlide2"></div>
+      <div class="rangeBar2" id="rangeBar2"></div>
+    </div>
+    <div class="fanhui" id="fanhui">
+    </div>
+    <div id="zhuo" class="zhuo">
+      <div id="zo" class="zo"></div>
+      <div id="zt" class="zt"></div>
+      <div id="ztr" class="ztr"></div>
+    </div>
+  </div>
+
+  <div class="title">
+    <div class="offset" id="offset">
+      <div class="wt" id="wt"></div>
+      <div class="timeb" id="timeb" >
+        <span id="timebspan" style="display: none"></span>
+      </div>
+    </div>
+  </div>
+  <div id="map" style="height: 6.7rem;width: 6.3rem;position: absolute;top: 0rem;left: 44%;margin-left: -2rem;"></div>
+</div>
+
+</body>
+
+
+
+
+<script>
+// 重命名 Electron 提供的 require
+window.nodeRequire = require;
+delete window.require;
+delete window.exports;
+delete window.module;
+</script>
+<script src="build/app.js"></script>
+<script src="./src/js/lib/d3.min.js"></script>
+<script src="./src/js/lib/zf.js"></script>
+</html>
+
+
+

@@ -1,0 +1,158 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea, button, p, blockquote, th, td{margin: 0;padding: 0;font-family: "微软雅黑"}
+textarea{resize: none}
+.clear{height:1px;overflow:hidden;clear:both;}
+a,img{border:0;}
+a{color: #666;text-decoration: none;}
+li{list-style-type:none;}
+.fl{float:left;}
+.fr{float:right;}
+.nf{clear:both;}
+.red{color:red;font-weight:bold;}
+.green{color:#00b500;font-weight:bold;}
+.ds{display:block;}
+.hid{overflow:hidden;}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;visibility:hidden;clear:both;height:0;content:'.';font-size:0}
+.jianbian{background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#f4f4f4),color-stop(100%,#eee));background: -webkit-linear-gradient(top,#f4f4f4 0,#eee 100%);background: linear-gradient(to bottom,#f4f4f4 0,#eee 100%);}
+.bottomshadow{border-bottom: solid 1px #B3B3B3;-webkit-box-shadow: 0 1px 1px 0 #DFDFDF;box-shadow: 0 1px 1px 0 #DFDFDF;}
+
+.aqi_vi{width: 4.92rem;height: 6.528rem;margin: 0.34rem  0  0 0.24rem ;
+  /*background: url("../img/b1.png") no-repeat ;background-size: cover;*/
+  padding-top: 0.03rem;}
+.wind_t{width: 14.50rem;height: 3.456rem;margin: 0.1rem 0 0 0.24rem;
+  /*background: url("../img/b2.png") no-repeat ;background-size: cover;*/
+}
+.bl{width: 4.12rem;height: 3.456rem;margin: 0.1rem 0 0 0.1rem;
+  /*background: url("../img/b3.png") no-repeat ;background-size: cover;*/
+  position: relative}
+
+.title{width: 5.52rem; height: 3.984rem;position: absolute;
+  top:0.05rem;left: 13.48rem;background: url("../img/tl_03.png") no-repeat ;background-size: cover}
+
+.adjust{width: 4.224rem; height: 2.424rem;position: absolute;  top: 4.2rem;  left:14.4875em;background: url("../img/aj.png") no-repeat ;background-size: cover;}
+
+.rangeP{position: absolute;
+  top:0.33rem;
+  left:0.7rem;
+  height: 1.57rem;
+  width: 0.08rem;
+}
+.rangeP1{position: absolute;
+  top:0.33rem;
+  left:2.16rem;
+  height: 1.57rem;
+  width: 0.08rem;
+}
+
+.rangeP2{position: absolute;
+  top:0.33rem;
+  left:3.49rem;
+  height: 1.57rem;
+  width: 0.08rem;
+}
+
+.rangeSlide,.rangeSlide1,.rangeSlide2{
+  position: absolute;
+  z-index: -1;
+  bottom:0rem;
+  left: -0.1rem;
+  width: 0.3rem;
+  height: 0rem;
+
+}
+.zhuo{
+  position: absolute;
+  bottom: 0.52rem;
+  left: 0.3rem;
+  height: 1.57rem;
+  width: 3.8rem;
+  z-index: -1;
+}
+.zo{
+  background-color: #ccc;
+  width: 0.3rem;
+  height: 0rem;
+  position: absolute;
+  bottom: 0;
+  margin-left: 0.4rem;
+}
+.zt{
+  background-color: #ccc;
+  width: 0.3rem;
+  height: 0rem;
+  position: absolute;
+  bottom: 0;
+  margin-left: 1.75rem;
+}
+.ztr{
+  background-color: #ccc;
+  width: 0.3rem;
+  height: 0rem;
+  position: absolute;
+  bottom: 0;
+  margin-left: 3.1rem;
+}
+.rangeBar,.rangeBar1,.rangeBar2{
+  position: absolute;
+  top: 1.42rem;
+  left: -0.1rem;
+  height: 0.3rem;
+  width: 0.3rem;
+  background:url("../img/bt.png") no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+.offset{
+  width: 4.9rem;
+  height: 0.3rem;
+  position: absolute;
+  top: 1.34rem;
+  left: 0.1rem;
+}
+.wt{
+  width: 0rem;
+  height: 0.3rem;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  z-index: -1;
+  background: #fff;
+}
+.timeb{
+  width:0.7rem;
+  height: 0.7rem;
+  position: absolute;
+  top:-0.18rem;
+  left:0rem;
+  background: url("../img/zk.png") no-repeat 100%;
+  background-size: cover;
+  cursor: pointer;
+}
+.timeb1{
+  width:0.7rem;
+  height: 0.7rem;
+  position: absolute;
+  top:-0.18rem;
+  left:0rem;
+  background: url("../img/zk.png") no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+#timebspan{
+  font-size: 0.16rem;
+  position: absolute;
+  font-weight: bold;
+  top:0.018rem;
+  left: 0.19rem;
+}
+
+.fanhui{
+  width: 1.5rem;
+  height: 0.4rem;
+  position: absolute;
+  bottom: 0;
+  left: -2rem;
+  background: url("../img/fahui.png");
+  background-size: cover;
+  cursor: pointer;
+}
